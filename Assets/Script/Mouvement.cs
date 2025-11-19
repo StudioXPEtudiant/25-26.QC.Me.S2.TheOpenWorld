@@ -8,12 +8,12 @@ public class Mouvement : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private float jumpCooldown = 0.5f; // wait between jumps
+    [SerializeField] private float jumpCooldown = 0.5f;
 
     [Header("Crouch Settings")]
     [SerializeField] private float crouchHeight = 0.5f;
     [SerializeField] private float crouchSpeed = 5f;
-    [SerializeField] private float crouchCooldown = 0.3f; // prevent spam crouching
+    [SerializeField] private float crouchCooldown = 0.3f;
 
     private Rigidbody rb;
     private Vector3 originalScale;
@@ -45,16 +45,21 @@ public class Mouvement : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(moveX, 0f, moveZ).normalized;
+
+        Vector3 movement = (transform.forward * moveZ + transform.right * moveX).normalized;
         rb.MovePosition(transform.position + movement * speed * Time.fixedDeltaTime);
     }
 
     private void Rotate()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).normalized;
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        Vector3 direction = new Vector3(moveX, 0f, moveZ).normalized;
+
         if (direction != Vector3.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            Quaternion targetRotation = Quaternion.LookRotation(transform.forward * moveZ + transform.right * moveX);
             rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
         }
     }
