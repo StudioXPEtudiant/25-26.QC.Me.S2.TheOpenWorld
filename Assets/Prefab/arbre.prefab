@@ -63,5 +63,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02a696de988519644a0443378c6ba1eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6282132459045848756}
   m_SourcePrefab: {fileID: 100100000, guid: 02a696de988519644a0443378c6ba1eb, type: 3}
+--- !u!23 &248602854193594434 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6717233154426017822, guid: 02a696de988519644a0443378c6ba1eb, type: 3}
+  m_PrefabInstance: {fileID: 6794613576499828828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1667407433003578024 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5289622029112683252, guid: 02a696de988519644a0443378c6ba1eb, type: 3}
+  m_PrefabInstance: {fileID: 6794613576499828828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5947628781905421581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02a696de988519644a0443378c6ba1eb, type: 3}
+  m_PrefabInstance: {fileID: 6794613576499828828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!205 &6282132459045848756
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947628781905421581}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.050440084
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 248602854193594434}
+    - renderer: {fileID: 1667407433003578024}
+  - screenRelativeHeight: 0.015631119
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 248602854193594434}
+    - renderer: {fileID: 1667407433003578024}
+  - screenRelativeHeight: 0.004586839
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1667407433003578024}
+  m_Enabled: 1

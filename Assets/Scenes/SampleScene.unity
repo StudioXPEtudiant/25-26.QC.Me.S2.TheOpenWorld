@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b215d5ccf08436f42bc693adc6f90e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 0}
+  body: {fileID: 395066362}
   attackDistance: 0.5
   attackSpeed: 10
   attackKey: 101
