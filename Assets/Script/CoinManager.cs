@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // Nécessaire pour l'affichage de texte
+using TMPro; // Nï¿½cessaire pour l'affichage de texte
 
 public class CoinManager : MonoBehaviour
 {
@@ -9,8 +9,9 @@ public class CoinManager : MonoBehaviour
 
     void Awake()
     {
-        // Système pour s'assurer qu'il n'y a qu'un seul Manager
+        // Systï¿½me pour s'assurer qu'il n'y a qu'un seul Manager
         if (instance == null) instance = this;
+        UpdateUI();
     }
 
     public void AddCoins(int amount)
@@ -21,6 +22,6 @@ public class CoinManager : MonoBehaviour
 
     void UpdateUI()
     {
-        coinText.text = "Pièces : " + coinCount.ToString();
+        coinText.text = "Coins : " + coinCount.ToString();
     }
 }

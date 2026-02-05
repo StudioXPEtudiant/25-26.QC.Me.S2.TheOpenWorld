@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
 
     void Update()
     {
-        // Fait tourner la pièce sur elle-même chaque seconde
+        // Fait tourner la piï¿½ce sur elle-mï¿½me chaque seconde
         transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
     }
 
@@ -15,10 +15,8 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            // Ajoute les points au manager
-            CoinManager.instance.AddCoins(value); 
             
-            // Détruit la pièce
+            CoinManager.instance.AddCoins(value); 
             Destroy(gameObject); 
         }
     }

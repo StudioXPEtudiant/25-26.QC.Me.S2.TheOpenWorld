@@ -34,7 +34,7 @@ public class CameraDragZoom3D : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             Vector3 delta = Input.mousePosition - lastMousePos;
-            transform.Rotate(Vector3.up, delta.x * dragSensitivity, Space.World);
+            transform.Rotate(Vector3.up, delta.x * dragSensitivity, Space.Self);
             transform.Rotate(transform.right, -delta.y * dragSensitivity, Space.Self);
             lastMousePos = Input.mousePosition;
         }
